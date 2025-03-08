@@ -1,0 +1,52 @@
+{
+  "name": "ai-grammar-fixer",
+  "displayName": "AI Grammar Fixer",
+  "description": "A VS Code extension to fix grammar using AI.",
+  "version": "0.0.1",
+  "publisher": "xmi1an",
+  "engines": {
+    "vscode": "^1.60.0"
+  },
+  "activationEvents": [
+    "onCommand:extension.fixGrammar"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "extension.fixGrammar",
+        "title": "Fix Grammar"
+      }
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "command": "extension.fixGrammar",
+          "group": "navigation"
+        }
+      ]
+    },
+    "keybindings": [
+      {
+        "command": "extension.fixGrammarKeybinding",
+        "key": "ctrl+shift+g",
+        "mac": "cmd+shift+g",
+        "when": "editorTextFocus"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "postinstall": "node ./node_modules/vscode/bin/install",
+    "test": "echo \"No tests yet\""
+  },
+  "devDependencies": {
+    "typescript": "^4.3.2",
+    "vscode": "^1.60.0"
+  },
+  "dependencies": {
+    "axios": "^0.21.1"
+  }
+}
