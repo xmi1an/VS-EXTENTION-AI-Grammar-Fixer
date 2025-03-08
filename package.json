@@ -1,9 +1,14 @@
 {
   "name": "ai-grammar-fixer",
   "displayName": "AI Grammar Fixer",
-  "description": "A VS Code extension to fix grammar using AI.",
-  "version": "0.0.1",
+  "description": "An extension that uses AI to fix grammar, spelling, and style issues.",
+  "version": "1.1.0",
   "publisher": "xmi1an",
+  "icon": "icon.png",
+  "categories": [
+    "Linters",
+    "AI"
+  ],
   "engines": {
     "vscode": "^1.60.0"
   },
